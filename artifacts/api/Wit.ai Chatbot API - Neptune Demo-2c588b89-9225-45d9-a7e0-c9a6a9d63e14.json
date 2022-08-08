@@ -1,0 +1,299 @@
+{
+	"id": "2c588b89-9225-45d9-a7e0-c9a6a9d63e14",
+	"createdAt": "2021-02-12T18:31:16.546Z",
+	"createdBy": "hendrik",
+	"auth": [
+		{
+			"role": "DEF",
+			"apiAuth": "c98cddc2-e1d2-431a-8124-38c919dba74c",
+			"authName": "Wit.ai",
+			"authDesc": "",
+			"id": "ce7508a6-82e1-4203-c418-a8e273567a7c"
+		}
+	],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "B70AE17F-2B98-480F-C88F-A1A71D5372AD",
+			"method": "GET",
+			"path": "/message",
+			"description": "",
+			"parameters": [
+				{
+					"name": "q",
+					"description": "",
+					"required": true,
+					"inPath": false,
+					"value": "",
+					"default": "",
+					"example": ""
+				},
+				{
+					"name": "v",
+					"description": "",
+					"required": false,
+					"inPath": false,
+					"value": "",
+					"default": "20190211",
+					"example": ""
+				}
+			],
+			"headers": [],
+			"responses": [
+				{
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"body": [],
+					"content": [
+						{
+							"name": "message_response",
+							"objectType": "object"
+						}
+					]
+				}
+			],
+			"enableCredentials": true,
+			"content": []
+		},
+		{
+			"id": "AD5BEFF6-EBCE-4C66-D0CD-E0588BDE4BCD",
+			"method": "POST",
+			"path": "/speech",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [
+				{
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"body": [],
+					"content": [
+						{
+							"id": "fd29f1a9-afdc-4c85-8759-d30bff9746ce",
+							"name": "message_response",
+							"objectType": "object"
+						}
+					]
+				}
+			],
+			"enableCredentials": true
+		}
+	],
+	"definitions": [
+		{
+			"id": "e3eebc70-d89d-4cfa-eae8-12c15306ac83",
+			"name": "message_response",
+			"description": "",
+			"isInclude": false,
+			"properties": [
+				{
+					"id": "5c9f4944-8496-4d8d-fb18-f8794155d20d",
+					"name": "_text",
+					"parent": "",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"children": []
+				},
+				{
+					"id": "a4a0de3f-bd40-435f-f423-da522f3e7114",
+					"name": "confidence",
+					"parent": "b926bdb6-0488-4c3a-958e-69bf0f7c473a",
+					"description": "",
+					"objectType": "number",
+					"isParent": false,
+					"children": []
+				},
+				{
+					"id": "8b85aad1-29d0-4d47-9835-13c54282c594",
+					"name": "value",
+					"parent": "b926bdb6-0488-4c3a-958e-69bf0f7c473a",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"children": []
+				},
+				{
+					"id": "b926bdb6-0488-4c3a-958e-69bf0f7c473a",
+					"name": "intent",
+					"parent": "e4b48299-34ab-4eb6-941c-71f6a3d86a35",
+					"description": "",
+					"objectType": "array",
+					"objectName": "intent",
+					"isParent": true,
+					"children": [
+						{
+							"id": "a4a0de3f-bd40-435f-f423-da522f3e7114",
+							"name": "confidence",
+							"parent": "b926bdb6-0488-4c3a-958e-69bf0f7c473a",
+							"description": "",
+							"objectType": "number",
+							"isParent": false,
+							"children": []
+						},
+						{
+							"id": "8b85aad1-29d0-4d47-9835-13c54282c594",
+							"name": "value",
+							"parent": "b926bdb6-0488-4c3a-958e-69bf0f7c473a",
+							"description": "",
+							"objectType": "string",
+							"isParent": false,
+							"children": []
+						}
+					]
+				},
+				{
+					"id": "b24fca4d-2c7e-4ab9-8ae0-f66dcfef68fd",
+					"name": "confidence",
+					"parent": "58aaafce-c207-4744-c811-7373b284caf5",
+					"description": "",
+					"objectType": "number",
+					"isParent": false,
+					"children": []
+				},
+				{
+					"id": "472a1956-cbce-4afe-bc95-4adea191c1a5",
+					"name": "value",
+					"parent": "58aaafce-c207-4744-c811-7373b284caf5",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"children": []
+				},
+				{
+					"id": "58aaafce-c207-4744-c811-7373b284caf5",
+					"name": "state",
+					"parent": "e4b48299-34ab-4eb6-941c-71f6a3d86a35",
+					"description": "",
+					"objectType": "array",
+					"objectName": "state",
+					"isParent": true,
+					"children": [
+						{
+							"id": "b24fca4d-2c7e-4ab9-8ae0-f66dcfef68fd",
+							"name": "confidence",
+							"parent": "58aaafce-c207-4744-c811-7373b284caf5",
+							"description": "",
+							"objectType": "number",
+							"isParent": false,
+							"children": []
+						},
+						{
+							"id": "472a1956-cbce-4afe-bc95-4adea191c1a5",
+							"name": "value",
+							"parent": "58aaafce-c207-4744-c811-7373b284caf5",
+							"description": "",
+							"objectType": "string",
+							"isParent": false,
+							"children": []
+						}
+					]
+				},
+				{
+					"id": "e4b48299-34ab-4eb6-941c-71f6a3d86a35",
+					"name": "entities",
+					"parent": "",
+					"description": "",
+					"objectType": "object",
+					"objectName": "entities",
+					"isParent": true,
+					"children": [
+						{
+							"id": "b926bdb6-0488-4c3a-958e-69bf0f7c473a",
+							"name": "intent",
+							"parent": "e4b48299-34ab-4eb6-941c-71f6a3d86a35",
+							"description": "",
+							"objectType": "array",
+							"objectName": "intent",
+							"isParent": true,
+							"children": [
+								{
+									"id": "a4a0de3f-bd40-435f-f423-da522f3e7114",
+									"name": "confidence",
+									"parent": "b926bdb6-0488-4c3a-958e-69bf0f7c473a",
+									"description": "",
+									"objectType": "number",
+									"isParent": false,
+									"children": []
+								},
+								{
+									"id": "8b85aad1-29d0-4d47-9835-13c54282c594",
+									"name": "value",
+									"parent": "b926bdb6-0488-4c3a-958e-69bf0f7c473a",
+									"description": "",
+									"objectType": "string",
+									"isParent": false,
+									"children": []
+								}
+							]
+						},
+						{
+							"id": "58aaafce-c207-4744-c811-7373b284caf5",
+							"name": "state",
+							"parent": "e4b48299-34ab-4eb6-941c-71f6a3d86a35",
+							"description": "",
+							"objectType": "array",
+							"objectName": "state",
+							"isParent": true,
+							"children": [
+								{
+									"id": "b24fca4d-2c7e-4ab9-8ae0-f66dcfef68fd",
+									"name": "confidence",
+									"parent": "58aaafce-c207-4744-c811-7373b284caf5",
+									"description": "",
+									"objectType": "number",
+									"isParent": false,
+									"children": []
+								},
+								{
+									"id": "472a1956-cbce-4afe-bc95-4adea191c1a5",
+									"name": "value",
+									"parent": "58aaafce-c207-4744-c811-7373b284caf5",
+									"description": "",
+									"objectType": "string",
+									"isParent": false,
+									"children": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "cea2c4ec-c647-4d07-b496-8c9c22cd8690",
+					"name": "msg_id",
+					"parent": "",
+					"description": "",
+					"objectType": "string",
+					"isParent": false,
+					"children": []
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "Wit.ai Chatbot API - Neptune Demo",
+	"endpoint": "https://api.wit.ai",
+	"ver": "22.8.8.1110",
+	"version": null,
+	"description": "Facebook platform for conversational API",
+	"mediaType": null,
+	"securitySchemes": "",
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "",
+	"about": null,
+	"enableProxy": true,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "c5d1af9e-0a17-ed11-bd6e-a085fcbc6cdc",
+	"apiGroup": null,
+	"apiFormat": 0,
+	"roles": []
+}
